@@ -1,0 +1,52 @@
+{
+  "name": "wecollab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.2",
+    "cookie-parser": "^1.4.5",
+    "cookie-session": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.11.6",
+    "passport": "^0.4.1",
+    "passport-google-oauth2": "^0.2.0",
+    "path": "^0.12.7",
+    "request": "^2.88.2",
+    "sass": "^1.50.0",
+    "socket-io": "^1.0.0",
+    "socket.io": "^3.0.3"
+  },
+  "devDependencies": {
+    "babel-preset-es2015-native-modules": "^6.9.4",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "install": "^0.13.0",
+    "mocha": "^10.0.0",
+    "nodemon": "^2.0.6",
+    "npm": "^8.9.0"
+  },
+  "scripts": {
+    "test": "mocha",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "watch": "sass --watch assets/css/scss/main.scss assets/css/scss/index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harshitg00/WeCollab.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/harshitg00/WeCollab/issues"
+  },
+  "homepage": "https://github.com/harshitg00/WeCollab#readme"
+}

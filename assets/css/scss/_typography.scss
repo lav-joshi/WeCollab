@@ -1,0 +1,36 @@
+.heading
+{
+  display: flex;
+  flex-direction: column;
+}
+.head-primary
+{
+  margin-top:-4px;
+}
+.head-primary
+{
+  font-size:3rem;
+  line-height:45px;
+  font-family: 'Philosopher', sans-serif;
+  margin-left:27px;
+}
+.head-primary p
+{
+  color:var(--primary-color) !important;
+  width:700px;
+}
+.head-secondary
+{
+  display: flex;
+  flex-direction: column;
+}
+.head-secondary span
+{
+  color: var(--orange-color) !important;
+  font-family: 'Poppins', sans-serif;
+  font-size:20px;
+}
+.head-secondary p
+{
+  font-family: 'Poppins', sans-serif;
+}

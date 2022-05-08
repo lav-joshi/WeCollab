@@ -1,0 +1,52 @@
+.sidebar {
+    min-width: 270px;
+    max-width: 270px;
+    background: var(--back-color);
+    color: var(--font-color);
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+    position: relative;
+}
+.sidnavLogo {
+    width: 100% !important;
+}
+.sidnavLogo img {
+    width: 40%;
+}
+#sidebar{ 
+  ul{
+    li {
+      padding: 0 1.5rem;
+      a {
+        padding: 10px 0;
+        display: block;
+        color: var(--font-color);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        &:hover{
+          color: var(--grey-dark-color)
+        }
+      }
+      &.active{
+        background: var(--tertiary-color);
+        a{
+          background: transparent;
+          color: var(--font-color);
+        }
+      }
+      &:hover{
+        background: var(--secondary-color);
+      }
+    }
+  }
+  .custom-menu{
+    #sidebarCollapse{
+      background: var(--primary-color);
+      border-color: var(--primary-color);
+      &:hover{
+        background: var(--dark-primary) !important;
+        border-color: var(--dark-primary) !important;
+      }
+    }
+  }
+}
