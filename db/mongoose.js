@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const keys = require('../config/keys.js');
+// const keys = require('../config/keys.js');
 
 mongoose.connect(
-    keys.mongoURI,
+    process.env.mongoURI,
     { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true },
     function(err){
         if(err) console.log(err);

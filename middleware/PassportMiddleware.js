@@ -1,15 +1,15 @@
 const GoogleStrategy = require("passport-google-oauth2").Strategy;
 const passport = require("passport");
-const keys = require("../config/keys");
+// const keys = require("../config/keys");
 
 const User = require("../models/User");
 
 passport.use(
   new GoogleStrategy(
     {
-      clientID: keys.clientID,
-      clientSecret: keys.clientSecret,
-      callbackURL: "http://localhost:5000/auth/google/callback",
+      clientID: process.env.clientID,
+      clientSecret: process.env.clientSecret,
+      callbackURL: `${process.env.HOST}/auth/google/callback`,
     },
     function (accessToken, refreshToken, profile, done) {
       User.findOne({ googleId: profile.id }, async (err, user) => {

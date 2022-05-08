@@ -7,11 +7,12 @@ var cors = require('cors')
 const bodyParser = require("body-parser");
 const methodOverride = require('method-override');
 const passport = require("passport");
-const keys = require("./config/keys");
+// const keys = require("./config/keys");
 const socketio = require("socket.io");
 const formatMessage = require('./utils/messages');
 const moment  = require("moment");
 const chalk = require('chalk');
+require("dotenv").config()
 
 //Importing MongoDB models
 require("./db/mongoose");
@@ -36,7 +37,7 @@ const server=http.createServer(app);
 
 const io = require("socket.io")(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: process.env.otherHost,
     methods: ["GET", "POST"],
     allowedHeaders: ["my-custom-header"],
     credentials: true,
@@ -53,7 +54,7 @@ app.use(cors())
 app.use(
     cookieSession({
       name: "session",
-      keys: [keys.sessionSecret]
+      keys: [process.env.sessionSecret]
     })
   );
 

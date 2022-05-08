@@ -19,7 +19,7 @@ router.get('/dashboard', auth, (req, res) => {
         else {
             // console.log(req.query);
             Hackathon.find({email : user.email},(err,events)=>{
-                res.render('dashboard', { currentUser: user, query:req.query, yourevents: events});
+                res.render('dashboard', { currentUser: user, query:req.query, yourevents: events, otherHost: process.env.otherHost});
             })
         }
     })

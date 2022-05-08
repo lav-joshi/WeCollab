@@ -96,7 +96,7 @@
 <script>
     function takePart(e){
         const userid = document.querySelector('.userid').textContent.trim();
-        const uri = "http://localhost:5000/user/hackathons/insert/"+ e.id +"/"+userid;
+        const uri = `${process.env.HOST}/user/hackathons/insert/`+ e.id +"/"+userid;
         console.log(uri);
         if(e.checked){
             fetch(uri, {
