@@ -91,7 +91,7 @@ router.get('/hackathons', auth, (req, res) => {
                     User.findOne({_id:req.user._id},(err,user)=>{
                         if(err) Error(err);
                         // console.log(user);
-                        res.render('hackathons',{ hacksCurrent: hackathonsCurrent, user: user, currentUser: user});
+                        res.render('hackathons',{ hacksCurrent: hackathonsCurrent, user: user, currentUser: user, HOST: process.env.HOST});
                     })
                 }
             })
