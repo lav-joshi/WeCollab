@@ -23,10 +23,19 @@
                     <p id="<%= hackathon.id %>" class="hacknames activeHack" style="color:black" onclick="renderData(this)"><%= hackathon.title %></p>
                 <% }else{ %>
                     <% if(hackathon.finished !== true){%>
-                        <p id="<%= hackathon.id %>" class="hacknames" style="color:black" onclick="renderData(this)"><%= hackathon.title %></p>
+                        <p id="<%= hackathon.id %>" class="hacknames" style="color:black" onclick="renderData(this)"><%= hackathon.title %>
+                            <% hackathon.tags.forEach((tag, i) => { %>
+                                <span hidden><%=tag %></span>
+                            <%})%>
+                        </p>
                     <% }else{%>
-                        <p id="<%= hackathon.id %>" class="hacknames" onclick="renderData(this)"><%= hackathon.title %></p>
+                        <p id="<%= hackathon.id %>" class="hacknames" onclick="renderData(this)"><%= hackathon.title %>
+                            <% hackathon.tags.forEach((tag, i) => { %>
+                                <span hidden><%=tag %></span>
+                            <%})%>
+                        </p>
                     <%}%>
+                    
                 <%}%>
             <% }) %>
         </div>
@@ -42,7 +51,11 @@
                 <%}else{%>
                         <section class="<%=hackathon.id %> hackSections">
                 <%}%>
-                    <p class="display-4 text-white" style="font-size: 30px; width: fit-content;"> <a href="<%= hackathon.link %>" ><%= hackathon.title %> <sup class="fa fa-external-link" style="font-size:medium; color: rgb(47, 192, 218);" aria-hidden="true"></sup></a></p>
+                    <p class="display-4 text-white" style="font-size: 30px; width: fit-content;"> <a href="<%= hackathon.link %>" ><%= hackathon.title %> <sup class="fa fa-external-link" style="font-size:medium; color: rgb(47, 192, 218);" aria-hidden="true"></sup></a>
+                        <% hackathon.tags.forEach((tag, i) => { %>
+                            <span  class="skill badge badge-dark p-1 m-1" style="font-size: 14px;"><%=tag %></span>
+                        <%})%>
+                    </p>
                 <% let x = 0 %>
                 <p> <%= hackathon.start_date.toLocaleString('en-US', {  }) %> - <%= hackathon.end_date.toLocaleString('en-US', {}) %> </p>
                 <% user.currentHacks.forEach((hack)=>{ %>
